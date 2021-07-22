@@ -71,6 +71,10 @@ namespace QuanLyCuaHangVatLieuXayDung
     }
     class DaXayDung : VatLieu
     {
+        public DaXayDung()
+        {
+            setLoaiVatLieu(2);
+        }
         public override string donViTinh()
         {
             return " 1m3";
@@ -86,6 +90,10 @@ namespace QuanLyCuaHangVatLieuXayDung
     }
     class XimangXayDung : VatLieu
     {
+        public  XimangXayDung()
+        {
+            setLoaiVatLieu(3);
+        }
         public override string donViTinh()
         {
             return " bao";
@@ -101,6 +109,10 @@ namespace QuanLyCuaHangVatLieuXayDung
     }
     class GachXayDung : VatLieu
     {
+        public GachXayDung()
+        {
+            setLoaiVatLieu(4);
+        }
         public override string donViTinh()
         {
             return " viên";
@@ -116,6 +128,10 @@ namespace QuanLyCuaHangVatLieuXayDung
     }
     class SatThepXayDung : VatLieu
     {
+        public SatThepXayDung()
+        {
+            setLoaiVatLieu(5);
+        }
         int KhoiLuongTrenCay;
         public override string donViTinh()
         {
@@ -132,6 +148,10 @@ namespace QuanLyCuaHangVatLieuXayDung
     }
     class Go : VatLieu
     {
+        public Go()
+        {
+            setLoaiVatLieu(6);
+        }
         public override string donViTinh()
         {
             return " Cây (11.7m)";
@@ -147,6 +167,10 @@ namespace QuanLyCuaHangVatLieuXayDung
     }
     class ThuyTinh : VatLieu
     {
+        public ThuyTinh()
+        {
+            setLoaiVatLieu(7);
+        }
         public override string donViTinh()
         {
             return " Cây (11.7m)";
@@ -162,6 +186,10 @@ namespace QuanLyCuaHangVatLieuXayDung
     }
     class Nhua : VatLieu
     {
+        public Nhua()
+        {
+            setLoaiVatLieu(8);
+        }
         public override string donViTinh()
         {
             return " Cây (11.7m)";
@@ -177,6 +205,10 @@ namespace QuanLyCuaHangVatLieuXayDung
     }
     class Su : VatLieu
     {
+        public Su()
+        {
+            setLoaiVatLieu(9);
+        }
         public override string donViTinh()
         {
             return " Cây (11.7m)";
@@ -197,9 +229,9 @@ namespace QuanLyCuaHangVatLieuXayDung
             ArrayList arrVatLieu = new ArrayList();
             Console.WriteLine("1. Tạo đối tượng Vật Liệu Cát");
             Console.WriteLine("2. Tạo đối tượng Vật Liệu Đá");
-            Console.WriteLine("2. Tạo đối tượng Vật Liệu Ximang");
-            Console.WriteLine("2. Tạo đối tượng Vật Liệu Gạch");
-            Console.WriteLine("2. Tạo đối tượng Vật Liệu Đá");
+            Console.WriteLine("3. Tạo đối tượng Vật Liệu Ximang");
+            Console.WriteLine("4. Tạo đối tượng Vật Liệu Gạch");
+            Console.WriteLine("5. Tạo đối tượng Vật Liệu Đá");
             Console.WriteLine("2. Hiện thông tin đối tượng Vật Liệu Cát");
 
             Console.WriteLine("Chọn chức năng bằng số: ");
@@ -216,7 +248,26 @@ namespace QuanLyCuaHangVatLieuXayDung
                         }
                     case 2:
                         {
-                            
+                            DaXayDung daXayDung = new DaXayDung();
+                            daXayDung.NhapThongTin();
+                            break;
+                        }
+                    case 3:
+                        {
+                            XimangXayDung ximangXayDung = new XimangXayDung();
+                            ximangXayDung.NhapThongTin();
+                            break;
+                        }
+                    case 4:
+                        {
+                            GachXayDung gachXayDung = new GachXayDung();
+                            gachXayDung.NhapThongTin();
+                            break;
+                        }
+                    case 5:
+                        {
+                            SatThepXayDung satThepXayDung = new SatThepXayDung();
+                            satThepXayDung.NhapThongTin();
                             break;
                         }
                 }
@@ -230,6 +281,5 @@ namespace QuanLyCuaHangVatLieuXayDung
             Program program = new Program();
             program.Programming();
         }
-
     }
 }
