@@ -284,9 +284,11 @@ namespace QuanLyCuaHangVatLieuXayDung
         }
         static void Main(string[] args)
         {
-            Console.OutputEncoding = Encoding.UTF8;
+            // For write Vietnamese
+            Console.OutputEncoding = Encoding.UTF8; 
             Console.InputEncoding = Encoding.UTF8;
 
+            //Run program
             Program program = new Program();
             program.Programming();
         }
