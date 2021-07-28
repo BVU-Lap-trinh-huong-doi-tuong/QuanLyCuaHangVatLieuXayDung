@@ -62,6 +62,9 @@ namespace QuanLyCuaHangVatLieuXayDung
     {
         public CatXayDung()
         {
+            setTen(" ");
+            setSoLuong(0);
+            setGia(0);
             setLoaiVatLieu(1);
         }
         public override string donViTinh()
