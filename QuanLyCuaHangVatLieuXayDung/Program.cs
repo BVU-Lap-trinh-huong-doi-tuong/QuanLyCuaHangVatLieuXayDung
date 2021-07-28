@@ -222,6 +222,10 @@ namespace QuanLyCuaHangVatLieuXayDung
             base.XuatThongTin();
         }
     }
+    class Helper
+    {
+
+    }
     class Program
     {        
         void Programming()
@@ -275,6 +279,7 @@ namespace QuanLyCuaHangVatLieuXayDung
                    }
         void Help()
         {
+            // Hướng Dẫn cho tạo record Cát
 
         }
         static void Main(string[] args)
