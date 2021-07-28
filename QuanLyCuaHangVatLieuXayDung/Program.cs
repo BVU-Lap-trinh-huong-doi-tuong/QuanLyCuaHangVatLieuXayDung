@@ -273,6 +273,10 @@ namespace QuanLyCuaHangVatLieuXayDung
                 }
             } while (iChucNang < 3);
                    }
+        void Help()
+        {
+
+        }
         static void Main(string[] args)
         {
             Console.OutputEncoding = Encoding.UTF8;
