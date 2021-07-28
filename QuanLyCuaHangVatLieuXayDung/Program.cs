@@ -67,6 +67,13 @@ namespace QuanLyCuaHangVatLieuXayDung
             setGia(0);
             setLoaiVatLieu(1);
         }
+        public CatXayDung(string Ten, int soLuong, int Gia)
+        {
+            setTen(Ten);
+            setSoLuong(soLuong);
+            setGia(Gia);
+            setLoaiVatLieu(1);
+        }
         public override string donViTinh()
         {
             return " 1m3";
