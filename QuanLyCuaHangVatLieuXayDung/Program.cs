@@ -15,39 +15,39 @@ namespace QuanLyCuaHangVatLieuXayDung
         int soLuong;
             public void setSoLuong(int soLuong) { this.soLuong = soLuong; }
             public int getSoLuong() { return soLuong; }
-        int Gia;
+        int Gia; // Giá trên đơn vị, đơn vị của mỗi loại đối tượng có thể khác nhau.
             public int getGia()
-        {
-            if (Gia > 0)
             {
-                return Gia;
+                if (Gia > 0)
+                {
+                    return Gia;
+                }
+                else
+                {
+                    return 0;
+                }
             }
-            else
-            {
-                return 0;
-            }
-        }
             public void setGia(int Gia)
-        {
-            if (Gia > 0)
             {
-                this.Gia = Gia;
+                if (Gia > 0 && Gia.Equals(this.Gia))
+                {
+                    this.Gia = Gia;
+                }
+                else
+                {
+                    this.Gia = 0;
+                }
             }
-            else
-            {
-                this.Gia = 0;
-            }
-        }
 
         public abstract string donViTinh();
 
         public virtual void NhapThongTin()
         {
-            Console.Write("Nhập tên: ");
+            Console.Write("Nhập tên vật liệu: ");
             Ten = Console.ReadLine();
-            Console.Write("Nhập giá: ");
+            Console.Write("Nhập giá         : ");
             Gia = int.Parse(Console.ReadLine());
-            Console.Write("Nhập số lượng: ");
+            Console.Write("Nhập số lượng    : ");
             soLuong = int.Parse(Console.ReadLine());
         }
         public virtual void XuatThongTin()
@@ -138,11 +138,19 @@ namespace QuanLyCuaHangVatLieuXayDung
     }
     class SatThepXayDung : VatLieu
     {
+        int KhoiLuongTrenCay;
+        public int getKhoiLuongTrenCay(){ return KhoiLuongTrenCay; }
+        public void setKhoiLuongTrenCay(int KhoiLuongTrenCay){ this.KhoiLuongTrenCay = KhoiLuongTrenCay; }
+
         public SatThepXayDung()
         {
+            setTen(" ");
+            setSoLuong(0);
+            setGia(0);
+            setKhoiLuongTrenCay(0);
             setLoaiVatLieu(5);
         }
-        int KhoiLuongTrenCay;
+
         public override string donViTinh()
         {
             return " Cây (11.7m)";
@@ -237,56 +245,165 @@ namespace QuanLyCuaHangVatLieuXayDung
 
     }
     class Program
-    {        
+    {
+        protected int iSoLuongVL;
         void Programming()
         {
             ArrayList arrVatLieu = new ArrayList();
-            Console.WriteLine("1. Tạo đối tượng Vật Liệu Cát");
-            Console.WriteLine("2. Tạo đối tượng Vật Liệu Đá");
-            Console.WriteLine("3. Tạo đối tượng Vật Liệu Ximang");
-            Console.WriteLine("4. Tạo đối tượng Vật Liệu Gạch");
-            Console.WriteLine("5. Tạo đối tượng Vật Liệu Đá");
-            Console.WriteLine("2. Hiện thông tin đối tượng Vật Liệu Cát");
-
-            Console.WriteLine("Chọn chức năng bằng số: ");
+            Console.WriteLine("1. Tạo Đối Tượng Vật Liệu");
+            Console.WriteLine("2. Hiện Đối Tượng Vật Liệu");
+            Console.WriteLine("Nhập Chức năng");
             int iChucNang = int.Parse(Console.ReadLine());
             do
             {
-                switch (iChucNang)
+                switch(iChucNang)
                 {
                     case 1:
                         {
-                            CatXayDung catXayDung= new CatXayDung();
-                            catXayDung.NhapThongTin();
+                            CreateObject();
                             break;
                         }
                     case 2:
                         {
-                            DaXayDung daXayDung = new DaXayDung();
-                            daXayDung.NhapThongTin();
                             break;
                         }
-                    case 3:
-                        {
-                            XimangXayDung ximangXayDung = new XimangXayDung();
-                            ximangXayDung.NhapThongTin();
-                            break;
-                        }
-                    case 4:
-                        {
-                            GachXayDung gachXayDung = new GachXayDung();
-                            gachXayDung.NhapThongTin();
-                            break;
-                        }
-                    case 5:
-                        {
-                            SatThepXayDung satThepXayDung = new SatThepXayDung();
-                            satThepXayDung.NhapThongTin();
-                            break;
-                        }
+                    default:
+                        Console.WriteLine("Sai chức năng");
+                        break;
                 }
-            } while (iChucNang < 3);
-                   }
+            } while(iChucNang != 0);
+        }
+        void CreateObject(VatLieu[] arrVatLieu)
+        {
+            Console.WriteLine("1. Tạo đối tượng Vật Liệu Cát");
+            Console.WriteLine("2. Tạo đối tượng Vật Liệu Đá");
+            Console.WriteLine("3. Tạo đối tượng Vật Liệu Ximang");
+            Console.WriteLine("4. Tạo đối tượng Vật Liệu Gạch");
+            Console.WriteLine("5. Tạo đối tượng Vật Liệu Sắt Thép");
+            Console.WriteLine("6. Về Menu Chính");
+
+            Console.WriteLine("Chọn chức năng bằng số: ");
+            int iChucNang = int.Parse(Console.ReadLine());
+            switch (iChucNang)
+            {
+                case 1:
+                    {
+                        Console.WriteLine("Vật Liệu Cát");
+                        CatXayDung catXayDung= new CatXayDung();
+                        catXayDung.NhapThongTin();
+                        iSoLuongVL++;
+                        break;
+                    }
+                case 2:
+                    {
+                        Console.WriteLine("Vật Liệu Đá");
+                        DaXayDung daXayDung = new DaXayDung();
+                        daXayDung.NhapThongTin();
+                        iSoLuongVL++;
+                        break;
+                    }
+                case 3:
+                    {
+                        Console.WriteLine("Vật Liệu Ximăng");
+                        XimangXayDung ximangXayDung = new XimangXayDung();
+                        ximangXayDung.NhapThongTin();
+                        iSoLuongVL++;
+                        break;
+                    }
+                case 4:
+                    {
+                        Console.WriteLine("Vật Liệu Gạch");
+                        GachXayDung gachXayDung = new GachXayDung();
+                        gachXayDung.NhapThongTin();
+                        iSoLuongVL++;
+                        break;
+                    }
+                case 5:
+                    {
+                        Console.WriteLine("Vật Liệu Sắt Thép");
+                        SatThepXayDung satThepXayDung = new SatThepXayDung();
+                        satThepXayDung.NhapThongTin();
+                        iSoLuongVL++;
+                        break;
+                    }
+                case 6:
+                    {
+                        Programming();
+                        break;
+                    }
+                default:
+                    Console.WriteLine("NHập Sai Ký Tự");
+                    break;
+            }
+        }
+        void ShowObject(VatLieu[] arrVatLieu)
+        {
+            Console.WriteLine("1. Hiện đối tượng Vật Liệu Cát");
+            Console.WriteLine("2. Hiện đối tượng Vật Liệu Đá");
+            Console.WriteLine("3. Hiện đối tượng Vật Liệu Ximang");
+            Console.WriteLine("4. Hiện đối tượng Vật Liệu Gạch");
+            Console.WriteLine("5. Hiện đối tượng Vật Liệu Sắt Thép");
+            Console.WriteLine("6. Về Menu Chính");
+
+            Console.WriteLine("Chọn chức năng bằng số: ");
+            int iChucNang = int.Parse(Console.ReadLine());
+            switch (iChucNang)
+            {
+                case 1:
+                    {
+                        Console.WriteLine("Vật Liệu Cát");
+                        for (int iThuTu = 0; iThuTu < iSoLuongVL; iThuTu++)
+                        {
+                            if (arrVatLieu[iThuTu].getLoaiVatLieu() == 1)
+                            {
+                                arrVatLieu[iThuTu].XuatThongTin();
+                            }
+                        }
+                        break;
+                    }
+                case 2:
+                    {
+                        Console.WriteLine("Vật Liệu Đá");
+                        DaXayDung daXayDung = new DaXayDung();
+                        daXayDung.NhapThongTin();
+                        break;
+                    }
+                case 3:
+                    {
+                        Console.WriteLine("Vật Liệu Ximăng");
+                        XimangXayDung ximangXayDung = new XimangXayDung();
+                        ximangXayDung.NhapThongTin();
+                        break;
+                    }
+                case 4:
+                    {
+                        Console.WriteLine("Vật Liệu Gạch");
+                        GachXayDung gachXayDung = new GachXayDung();
+                        gachXayDung.NhapThongTin();
+                        break;
+                    }
+                case 5:
+                    {
+                        Console.WriteLine("Vật Liệu Sắt Thép");
+                        SatThepXayDung satThepXayDung = new SatThepXayDung();
+                        satThepXayDung.NhapThongTin();
+                        break;
+                    }
+                case 6:
+                    {
+                        Programming();
+                        break;
+                    }
+                default:
+                    Console.WriteLine("NHập Sai Ký Tự");
+                    break;
+            }
+        }
+        void CatProgram()
+        {
+
+        }
+
         void Help()
         {
             // Hướng Dẫn cho tạo record Cát
