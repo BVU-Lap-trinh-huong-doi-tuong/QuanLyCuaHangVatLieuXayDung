@@ -7,16 +7,16 @@ namespace QuanLyCuaHangVatLieuXayDung
     abstract class VatLieu
     {
         int loaiVatLieu;
-            public void setLoaiVatLieu(int loaiVatLieu) { this.loaiVatLieu = loaiVatLieu; }
-            public int getLoaiVatLieu() { return this.loaiVatLieu; }
+        public void setLoaiVatLieu(int loaiVatLieu) { this.loaiVatLieu = loaiVatLieu; }
+        public int getLoaiVatLieu() { return this.loaiVatLieu; }
         string Ten;
-            public void setTen(string Ten) { this.Ten = Ten; }
-            public string getTen() { return Ten; }
+        public void setTen(string Ten) { this.Ten = Ten; }
+        public string getTen() { return Ten; }
         int soLuong;
-            public void setSoLuong(int soLuong) { this.soLuong = soLuong; }
-            public int getSoLuong() { return soLuong; }
+        public void setSoLuong(int soLuong) { this.soLuong = soLuong; }
+        public int getSoLuong() { return soLuong; }
         int Gia; // Giá trên đơn vị, đơn vị của mỗi loại đối tượng có thể khác nhau.
-            public int getGia()
+        public int getGia()
             {
                 if (Gia > 0)
                 {
@@ -27,8 +27,10 @@ namespace QuanLyCuaHangVatLieuXayDung
                     return 0;
                 }
             }
-            public void setGia(int Gia)
+        public void setGia(int Gia)
             {
+                while (!Int32.TryParse(Console.ReadLine(), out Gia))
+                Console.WriteLine("Invalid input! Try again"); 
                 if (Gia > 0 && Gia.Equals(this.Gia))
                 {
                     this.Gia = Gia;
@@ -46,7 +48,7 @@ namespace QuanLyCuaHangVatLieuXayDung
             Console.Write("Nhập tên vật liệu: ");
             Ten = Console.ReadLine();
             Console.Write("Nhập giá         : ");
-            Gia = int.Parse(Console.ReadLine());
+            Gia = Input.NhapSoNguyen();
             Console.Write("Nhập số lượng    : ");
             soLuong = int.Parse(Console.ReadLine());
         }
@@ -244,12 +246,27 @@ namespace QuanLyCuaHangVatLieuXayDung
     {
 
     }
+    class Input
+    {
+        public static int NhapSoNguyen()
+        {
+            int SoNguyen = int.Parse(Console.ReadLine());
+            
+            if (int.IsNullOrEmpty(name))
+            {
+                Console.WriteLine("Không được để trống! Nhập một lần nữa");
+                name = Console.ReadLine();
+            }
+            return SoNguyen;
+        }
+    }
     class Program
     {
         protected int iSoLuongVL;
         void Programming()
         {
             ArrayList arrVatLieu = new ArrayList();
+            Console.WriteLine("0. Test từng phần của chương trình");
             Console.WriteLine("1. Tạo Đối Tượng Vật Liệu");
             Console.WriteLine("2. Hiện Đối Tượng Vật Liệu");
             Console.WriteLine("Nhập Chức năng");
@@ -258,6 +275,12 @@ namespace QuanLyCuaHangVatLieuXayDung
             {
                 switch(iChucNang)
                 {
+                    case 0:
+                        {
+                            int InRa = Input.NhapSoNguyen();
+                            Console.WriteLine(InRa);
+                            break;
+                        }
                     case 1:
                         {
                             CreateObject();
