@@ -242,16 +242,22 @@ namespace QuanLyCuaHangVatLieuXayDung
             base.XuatThongTin();
         }
     }
-    class Helper
+    class Menu
     {
-
+        public static void MenuChinh()
+        {
+            Console.WriteLine("0. Test từng phần của chương trình");
+            Console.WriteLine("1. Tạo Đối Tượng Vật Liệu");
+            Console.WriteLine("2. Hiện Đối Tượng Vật Liệu");
+            Console.WriteLine("Nhập Chức năng");
+        }
     }
     class Input
     {
         public static int NhapSoNguyen()
         {
             int SoNguyen = int.Parse(Console.ReadLine());
-            
+            Menu.MenuChinh();
             if (int.IsNullOrEmpty(name))
             {
                 Console.WriteLine("Không được để trống! Nhập một lần nữa");
@@ -266,10 +272,7 @@ namespace QuanLyCuaHangVatLieuXayDung
         void Programming()
         {
             ArrayList arrVatLieu = new ArrayList();
-            Console.WriteLine("0. Test từng phần của chương trình");
-            Console.WriteLine("1. Tạo Đối Tượng Vật Liệu");
-            Console.WriteLine("2. Hiện Đối Tượng Vật Liệu");
-            Console.WriteLine("Nhập Chức năng");
+            
             int iChucNang = int.Parse(Console.ReadLine());
             do
             {
