@@ -5,3 +5,10 @@ D:\OneDrive\Project\Programming Project\Môn Lập trình hướng đối tượ
 D:\OneDrive\Project\Programming Project\Môn Lập trình hướng đối tượng\QuanLyCuaHangVatLieuXayDung\bin\Debug\QuanLyCuaHangVatLieuXayDung.pdb
 D:\OneDrive\Project\Programming Project\Môn Lập trình hướng đối tượng\QuanLyCuaHangVatLieuXayDung\obj\Debug\QuanLyCuaHangVatLieuXayDung.exe
 D:\OneDrive\Project\Programming Project\Môn Lập trình hướng đối tượng\QuanLyCuaHangVatLieuXayDung\obj\Debug\QuanLyCuaHangVatLieuXayDung.pdb
+D:\GitHub\QuanLyCuaHangVatLieuXayDung\obj\Debug\QuanLyCuaHangVatLieuXayDung.csproj.AssemblyReference.cache
+D:\GitHub\QuanLyCuaHangVatLieuXayDung\obj\Debug\QuanLyCuaHangVatLieuXayDung.csproj.CoreCompileInputs.cache
+D:\GitHub\QuanLyCuaHangVatLieuXayDung\obj\Debug\QuanLyCuaHangVatLieuXayDung.exe
+D:\GitHub\QuanLyCuaHangVatLieuXayDung\obj\Debug\QuanLyCuaHangVatLieuXayDung.pdb
+D:\GitHub\QuanLyCuaHangVatLieuXayDung\bin\Debug\QuanLyCuaHangVatLieuXayDung.exe.config
+D:\GitHub\QuanLyCuaHangVatLieuXayDung\bin\Debug\QuanLyCuaHangVatLieuXayDung.exe
+D:\GitHub\QuanLyCuaHangVatLieuXayDung\bin\Debug\QuanLyCuaHangVatLieuXayDung.pdb
