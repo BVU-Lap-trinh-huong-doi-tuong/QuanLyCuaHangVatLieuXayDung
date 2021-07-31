@@ -249,56 +249,13 @@ namespace QuanLyCuaHangVatLieuXayDung
             Console.WriteLine("0. Test từng phần của chương trình");
             Console.WriteLine("1. Tạo Đối Tượng Vật Liệu");
             Console.WriteLine("2. Hiện Đối Tượng Vật Liệu");
-            Console.WriteLine("Nhập Chức năng");
+            Console.Write("Nhập Chức năng: ");
         }
     }
-    class Input
+    class ChucNang
     {
-        public static int NhapSoNguyen()
-        {
-            int SoNguyen = int.Parse(Console.ReadLine());
-            /* if (int.IsNullOrEmpty(name))
-            {
-                Console.WriteLine("Không được để trống! Nhập một lần nữa");
-                name = Console.ReadLine();
-            }*/
-            return SoNguyen;
-        }
-    }
-    class Program
-    {
-        protected int iSoLuongVL;
-        void Programming()
-        {
-            ArrayList arrVatLieu = new ArrayList();
-            Menu.MenuChinh();
-            int iChucNang = int.Parse(Console.ReadLine());
-            do
-            {
-                switch(iChucNang)
-                {
-                    case 0:
-                        {
-                            int InRa = Input.NhapSoNguyen();
-                            Console.WriteLine(InRa);
-                            break;
-                        }
-                    case 1:
-                        {
-                            //CreateObject();
-                            break;
-                        }
-                    case 2:
-                        {
-                            break;
-                        }
-                    default:
-                        Console.WriteLine("Sai chức năng");
-                        break;
-                }
-            } while(iChucNang != 0);
-        }
-        void CreateObject(VatLieu[] arrVatLieu)
+        public int iSoLuongVL;
+        public static void CreateObject(ArrayList arrVatLieu)
         {
             Console.WriteLine("1. Tạo đối tượng Vật Liệu Cát");
             Console.WriteLine("2. Tạo đối tượng Vật Liệu Đá");
@@ -314,8 +271,9 @@ namespace QuanLyCuaHangVatLieuXayDung
                 case 1:
                     {
                         Console.WriteLine("Vật Liệu Cát");
-                        CatXayDung catXayDung= new CatXayDung();
+                        CatXayDung catXayDung = new CatXayDung();
                         catXayDung.NhapThongTin();
+                        arrVatLieu.Add(catXayDung);
                         iSoLuongVL++;
                         break;
                     }
@@ -353,7 +311,7 @@ namespace QuanLyCuaHangVatLieuXayDung
                     }
                 case 6:
                     {
-                        Programming();
+                        
                         break;
                     }
                 default:
@@ -416,13 +374,66 @@ namespace QuanLyCuaHangVatLieuXayDung
                     }
                 case 6:
                     {
-                        Programming();
+                        Program.Programming();
                         break;
                     }
                 default:
                     Console.WriteLine("NHập Sai Ký Tự");
                     break;
             }
+        }
+        //Chức năng chạy theo cái Menu Chính
+        public static void PlayByMenuChinh(int iChucNang, ArrayList arrVatLieu)
+        {
+            switch (iChucNang)
+            {
+                case 0:
+                    {
+                        string strTest = "Test Nhap Số Nguyên";
+                        Console.Title = strTest;
+                        Console.WriteLine(strTest);
+                        int InRa = Input.NhapSoNguyen();
+                        Console.WriteLine(InRa);
+                        break;
+                    }
+                case 1:
+                    {
+                        CreateObject(arrVatLieu);
+                        break;
+                    }
+                case 2:
+                    {
+                        break;
+                    }
+                default:
+                    Console.WriteLine("Sai chức năng");
+                    break;
+            }
+        }
+    }
+    class Input
+    {
+        public static int NhapSoNguyen()
+        {
+            int SoNguyen = int.Parse(Console.ReadLine());
+            return SoNguyen;
+        }
+    }
+    class Program
+    {
+        public static void Programming()
+        {
+            ArrayList arrVatLieu = new ArrayList();
+            Menu.MenuChinh();
+            int iChucNang;
+            do
+            {
+                iChucNang = int.Parse(Console.ReadLine());
+                ChucNang.PlayByMenuChinh(iChucNang, arrVatLieu);
+            } while (iChucNang < 3);
+            
+            
+            
         }
         void CatProgram()
         {
@@ -441,8 +452,7 @@ namespace QuanLyCuaHangVatLieuXayDung
             Console.InputEncoding = Encoding.UTF8;
 
             //Run program
-            Program program = new Program();
-            program.Programming();
+            Programming();
         }
     }
 }
