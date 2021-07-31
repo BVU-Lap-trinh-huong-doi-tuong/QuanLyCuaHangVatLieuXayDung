@@ -257,7 +257,6 @@ namespace QuanLyCuaHangVatLieuXayDung
         public static int NhapSoNguyen()
         {
             int SoNguyen = int.Parse(Console.ReadLine());
-            Menu.MenuChinh();
             if (int.IsNullOrEmpty(name))
             {
                 Console.WriteLine("Không được để trống! Nhập một lần nữa");
@@ -272,7 +271,7 @@ namespace QuanLyCuaHangVatLieuXayDung
         void Programming()
         {
             ArrayList arrVatLieu = new ArrayList();
-            
+            Menu.MenuChinh();
             int iChucNang = int.Parse(Console.ReadLine());
             do
             {
