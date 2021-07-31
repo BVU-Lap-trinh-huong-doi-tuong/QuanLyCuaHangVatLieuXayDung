@@ -257,11 +257,11 @@ namespace QuanLyCuaHangVatLieuXayDung
         public static int NhapSoNguyen()
         {
             int SoNguyen = int.Parse(Console.ReadLine());
-            if (int.IsNullOrEmpty(name))
+            /* if (int.IsNullOrEmpty(name))
             {
                 Console.WriteLine("Không được để trống! Nhập một lần nữa");
                 name = Console.ReadLine();
-            }
+            }*/
             return SoNguyen;
         }
     }
@@ -285,7 +285,7 @@ namespace QuanLyCuaHangVatLieuXayDung
                         }
                     case 1:
                         {
-                            CreateObject();
+                            //CreateObject();
                             break;
                         }
                     case 2:
