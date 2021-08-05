@@ -249,6 +249,7 @@ namespace QuanLyCuaHangVatLieuXayDung
             base.XuatThongTin();
         }
     }
+    
     class Menu
     {
         public static void MenuChinh()
@@ -258,7 +259,7 @@ namespace QuanLyCuaHangVatLieuXayDung
             Console.WriteLine("| 1. Tạo Đối Tượng Vật Liệu            |");
             Console.WriteLine("| 2. Hiện Đối Tượng Vật Liệu           |");
             Console.WriteLine("========================================");
-            Console.Write("Nhập Chức năng: ");
+            Console.Write("Chọn chức năng bằng số: ");
         }
         public static void MenuCreateObject()
         {
@@ -276,7 +277,16 @@ namespace QuanLyCuaHangVatLieuXayDung
             Console.WriteLine("========================================");
             Console.Write("Chọn chức năng bằng số: ");
         }
-        public static void MenuShowObject()
+        public static void MenuShow()
+        {
+            Console.WriteLine("========================================");
+            Console.WriteLine("| 1. Hiện Một Đối Tượng                |");
+            Console.WriteLine("| 2. Sắp Xếp Đối Tượng                 |");
+            Console.WriteLine("| 0. Về Menu Chính                     |");
+            Console.WriteLine("========================================");
+            Console.Write("Chọn chức năng bằng số: ");
+        }
+        public static void MenuShowSingleObject()
         {
             Console.WriteLine("========================================");
             Console.WriteLine("| 1. Hiện đối tượng Vật Liệu Cát       |");
@@ -414,7 +424,7 @@ namespace QuanLyCuaHangVatLieuXayDung
                 }
             } while (1 == 1);
         }
-        
+        // Sắp xếp
         //Xuất Đối tượng
         public static void XuatCat(ArrayList arrVatLieu)
         {
@@ -434,7 +444,7 @@ namespace QuanLyCuaHangVatLieuXayDung
         {
             DaXayDung da = new DaXayDung();
             Type ia = arrVatLieu[iThuTu].GetType();
-            Type ib = da.GetType(); 
+            Type ib = da.GetType();
             if (ia.Equals(ib))
             {
                 da = (DaXayDung)arrVatLieu[iThuTu];
@@ -445,7 +455,7 @@ namespace QuanLyCuaHangVatLieuXayDung
         {
             XimangXayDung xiMang = new XimangXayDung();
             Type ia = arrVatLieu[iThuTu].GetType();
-            Type ib = xiMang.GetType(); 
+            Type ib = xiMang.GetType();
             if (ia.Equals(ib))
             {
                 xiMang = (XimangXayDung)arrVatLieu[iThuTu];
@@ -456,7 +466,7 @@ namespace QuanLyCuaHangVatLieuXayDung
         {
             GachXayDung gach = new GachXayDung();
             Type ia = arrVatLieu[iThuTu].GetType();
-            Type ib = gach.GetType(); 
+            Type ib = gach.GetType();
             if (ia.Equals(ib))
             {
                 gach = (GachXayDung)arrVatLieu[iThuTu];
@@ -465,7 +475,7 @@ namespace QuanLyCuaHangVatLieuXayDung
         }
         public static void XuatSatThep(ArrayList arrVatLieu, int iThuTu)
         {
-            SatThepXayDung satThep = new SatThepXayDung(); 
+            SatThepXayDung satThep = new SatThepXayDung();
             Type ia = arrVatLieu[iThuTu].GetType();
             Type ib = satThep.GetType();
             if (ia.Equals(ib))
@@ -478,7 +488,7 @@ namespace QuanLyCuaHangVatLieuXayDung
         {
             Go go = new Go();
             Type ia = arrVatLieu[iThuTu].GetType();
-            Type ib = go.GetType(); 
+            Type ib = go.GetType();
             if (ia.Equals(ib))
             {
                 go = (Go)arrVatLieu[iThuTu];
@@ -489,7 +499,7 @@ namespace QuanLyCuaHangVatLieuXayDung
         {
             ThuyTinh thuyTinh = new ThuyTinh();
             Type ia = arrVatLieu[iThuTu].GetType();
-            Type ib = thuyTinh.GetType(); 
+            Type ib = thuyTinh.GetType();
             if (ia.Equals(ib))
             {
                 thuyTinh = (ThuyTinh)arrVatLieu[iThuTu];
@@ -500,7 +510,7 @@ namespace QuanLyCuaHangVatLieuXayDung
         {
             Nhua nhua = new Nhua();
             Type ia = arrVatLieu[iThuTu].GetType();
-            Type ib = nhua.GetType(); 
+            Type ib = nhua.GetType();
             if (ia.Equals(ib))
             {
                 nhua = (Nhua)arrVatLieu[iThuTu];
@@ -511,20 +521,19 @@ namespace QuanLyCuaHangVatLieuXayDung
         {
             Su su = new Su();
             Type ia = arrVatLieu[iThuTu].GetType();
-            Type ib = su.GetType(); 
+            Type ib = su.GetType();
             if (ia.Equals(ib))
             {
                 su = (Su)arrVatLieu[iThuTu];
                 su.XuatThongTin();
             }
         }
-        
-        public static void ShowObject(ArrayList arrVatLieu)
+        public static void ShowSingleObject(ArrayList arrVatLieu)
         {
             do
             {
-                Menu.MenuShowObject();
-                Console.Title = "Hiện Đối Tượng | " + Program.Name;
+                Menu.MenuShowSingleObject();
+                Console.Title = "Hiện Một Đối Tượng | " + Program.Name;
                 switch (ReturnNumberInput())
                 {
                     case 1:
@@ -619,9 +628,61 @@ namespace QuanLyCuaHangVatLieuXayDung
                         Console.WriteLine("Nhập Sai Ký Tự");
                         break;
                 }
-            } while (1 == 1);
+            } while (true);
         }
+        public static void ShowObject(ArrayList arrVatLieu)
+        {
+            do
+            {
+                Console.Clear();
+                Menu.MenuShow();
+                Console.Title = "Hiện và Sắp Xếp Đối Tượng | " + Program.Name;
+                switch (ReturnNumberInput())
+                {
+                    case 1:
+                        {
+                            ShowSingleObject(arrVatLieu);
+                            break;
+                        }
+                    case 2:
+                        {
+                            SapXepTheoGia(arrVatLieu);
+                            Console.ReadLine();
+                            break;
+                        }
+                    case 0:
+                        {
+                            Program.Programming(arrVatLieu);
+                            break;
+                        }
+                }
+            } while (true);
+        }
+        public static void SapXepTheoGia(ArrayList arrVatLieu)
+        {
+            int So = arrVatLieu.Count;
+            VatLieu[] arrTam = (VatLieu[])arrVatLieu.ToArray(typeof(VatLieu));
+            for (int i = 0; i < So; i++)
+            {
+                for (int j = i + 1; j < So; j++)
+                {
+                    if (arrTam[i].getGia() > arrTam[j].getGia())
+                    {
+                        // Nếu arr[i] > arr[j] thì hoán đổi giá trị của arr[i] và arr[j]
+                        VatLieu temp = arrTam[i];
+                        arrTam[i] = arrTam[j];
+                        arrTam[j] = temp;
+                    }
+                }
+            }
+            for (int i = 0; i < So; i++)
+            {
+                arrTam[i].XuatThongTin();
+            }
+        }
+    
     }
+
     class Input
     {
         public static int NhapSoNguyen()
@@ -686,8 +747,8 @@ namespace QuanLyCuaHangVatLieuXayDung
         static void Main(string[] args)
         {
             // For write Vietnamese
-            Console.OutputEncoding = Encoding.UTF8; 
-            Console.InputEncoding = Encoding.UTF8;
+            Console.OutputEncoding = Encoding.Unicode; 
+            Console.InputEncoding = Encoding.Unicode;
             Console.Title = Name;
 
             ArrayList arrVatLieu = new ArrayList();
