@@ -27,18 +27,22 @@ namespace QuanLyCuaHangVatLieuXayDung
                         Console.ReadLine();
                         break;
                     }
-                case 1:
+                case 1: // Tạo đối tượng
                     {
                         Console.Clear();
                         ChucNang.CreateObject(arrVatLieu);
                         break;
                     }
-                case 2:
+                case 2: // Hiện đối tượng
                     {
                         Console.Clear();
                         ChucNang.ShowObject(arrVatLieu);
                         Console.WriteLine("Enter để tiếp tục");
                         Console.ReadLine();
+                        break;
+                    }
+                case 3: //Cập nhật đối tượng
+                    {
                         break;
                     }
                 default:
