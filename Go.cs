@@ -1,4 +1,6 @@
-﻿namespace QuanLyCuaHangVatLieuXayDung
+﻿using System.Collections;
+
+namespace QuanLyCuaHangVatLieuXayDung
 {
     class Go : VatLieu
     {
@@ -10,9 +12,9 @@
         {
             return " Cây (11.7m)";
         }
-        public override void NhapThongTin()
+        public override void NhapThongTin(ArrayList arrVatLieu)
         {
-            base.NhapThongTin();
+            base.NhapThongTin(arrVatLieu);
         }
         public override void XuatThongTin()
         {

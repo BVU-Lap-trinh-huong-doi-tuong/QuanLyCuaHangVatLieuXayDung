@@ -1,8 +1,10 @@
-﻿namespace QuanLyCuaHangVatLieuXayDung
+﻿using System.Collections;
+
+namespace QuanLyCuaHangVatLieuXayDung
 {
-    class GachXayDung : VatLieu
+    class Gach : VatLieu
     {
-        public GachXayDung()
+        public Gach()
         {
             setLoaiVatLieu(4);
         }
@@ -10,9 +12,9 @@
         {
             return " viên";
         }
-        public override void NhapThongTin()
+        public override void NhapThongTin(ArrayList arrVatLieu)
         {
-            base.NhapThongTin();
+            base.NhapThongTin(arrVatLieu);
         }
         public override void XuatThongTin()
         {

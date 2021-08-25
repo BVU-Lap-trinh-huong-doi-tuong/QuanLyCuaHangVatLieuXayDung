@@ -13,6 +13,14 @@ namespace QuanLyCuaHangVatLieuXayDung
             Console.WriteLine("========================================");
             Console.Write("Chọn chức năng bằng số: ");
         }
+        public static void MenuNhapThongTin()
+        {
+            Console.WriteLine("10. Chỉ Thoát và Lưu");
+            Console.WriteLine("0. Thoát và xoá đối tượng ");
+            Console.WriteLine("1. Nhập tên vật liệu ");
+            Console.WriteLine("2. Nhập số lượng     ");
+            Console.WriteLine("3. Nhập giá          ");
+        }
         public static void MenuCreateObject()
         {
             Console.WriteLine("========================================");
@@ -32,8 +40,9 @@ namespace QuanLyCuaHangVatLieuXayDung
         public static void MenuShow()
         {
             Console.WriteLine("========================================");
-            Console.WriteLine("| 1. Hiện Một Đối Tượng                |");
-            Console.WriteLine("| 2. Sắp Xếp Đối Tượng                 |");
+            Console.WriteLine("| 1. Hiện Một Loại Đối Tượng           |");
+            Console.WriteLine("| 2. Hiện Tất Cả Đối Tượng             |");
+            Console.WriteLine("| 3. Sắp Xếp Đối Tượng                 |");
             Console.WriteLine("| 0. Về Menu Chính                     |");
             Console.WriteLine("========================================");
             Console.Write("Chọn chức năng bằng số: ");

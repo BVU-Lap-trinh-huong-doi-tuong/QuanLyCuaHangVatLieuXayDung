@@ -1,8 +1,10 @@
-﻿namespace QuanLyCuaHangVatLieuXayDung
+﻿using System.Collections;
+
+namespace QuanLyCuaHangVatLieuXayDung
 {
-    class DaXayDung : VatLieu
+    class Da : VatLieu
     {
-        public DaXayDung()
+        public Da()
         {
             setTen(" ");
             setSoLuong(0);
@@ -13,9 +15,9 @@
         {
             return " 1m3";
         }
-        public override void NhapThongTin()
+        public override void NhapThongTin(ArrayList arrVatLieu)
         {
-            base.NhapThongTin();
+            base.NhapThongTin(arrVatLieu);
         }
         public override void XuatThongTin()
         {

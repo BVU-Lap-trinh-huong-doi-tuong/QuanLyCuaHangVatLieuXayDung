@@ -1,12 +1,14 @@
-﻿namespace QuanLyCuaHangVatLieuXayDung
+﻿using System.Collections;
+
+namespace QuanLyCuaHangVatLieuXayDung
 {
-    class SatThepXayDung : VatLieu
+    class SatThep : VatLieu
     {
         int KhoiLuongTrenCay;
         public int getKhoiLuongTrenCay(){ return KhoiLuongTrenCay; }
         public void setKhoiLuongTrenCay(int KhoiLuongTrenCay){ this.KhoiLuongTrenCay = KhoiLuongTrenCay; }
 
-        public SatThepXayDung()
+        public SatThep()
         {
             setTen(" ");
             setSoLuong(0);
@@ -19,9 +21,9 @@
         {
             return " Cây (11.7m)";
         }
-        public override void NhapThongTin()
+        public override void NhapThongTin(ArrayList arrVatLieu)
         {
-            base.NhapThongTin();
+            base.NhapThongTin(arrVatLieu);
         }
         public override void XuatThongTin()
         {

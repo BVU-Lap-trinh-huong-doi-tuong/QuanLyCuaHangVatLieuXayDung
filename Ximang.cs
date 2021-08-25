@@ -1,8 +1,10 @@
-﻿namespace QuanLyCuaHangVatLieuXayDung
+﻿using System.Collections;
+
+namespace QuanLyCuaHangVatLieuXayDung
 {
-    class XimangXayDung : VatLieu
+    class Ximang : VatLieu
     {
-        public XimangXayDung()
+        public Ximang()
         {
             setLoaiVatLieu(2);
             setSoLuong(0);
@@ -13,9 +15,9 @@
         {
             return " bao";
         }
-        public override void NhapThongTin()
+        public override void NhapThongTin(ArrayList arrVatLieu)
         {
-            base.NhapThongTin();
+            base.NhapThongTin(arrVatLieu);
         }
         public override void XuatThongTin()
         {

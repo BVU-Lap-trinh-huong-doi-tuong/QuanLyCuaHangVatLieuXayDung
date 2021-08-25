@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 
 namespace QuanLyCuaHangVatLieuXayDung
 {
@@ -31,14 +32,50 @@ namespace QuanLyCuaHangVatLieuXayDung
             }
         public abstract string donViTinh();
 
-        public virtual void NhapThongTin()
+        public virtual void NhapThongTin(ArrayList arrVatLieu)
         {
-            Console.Write("Nhập tên vật liệu: ");
-            Ten = Console.ReadLine();
-            Console.Write("Nhập giá         : ");
-            Gia = Input.NhapSoNguyen();
-            Console.Write("Nhập số lượng    : ");
-            soLuong = Input.NhapSoNguyen();
+            do
+            {
+                Menu.MenuNhapThongTin();
+                int iChucNang = Input.NhapSoNguyen();
+                switch (iChucNang)
+                {
+                    case 0: //Thoát và xoá Đối Tượng
+                        {
+                            arrVatLieu.RemoveAt(arrVatLieu.Count);
+                            Program.Programming(arrVatLieu);
+                            break;
+                        }
+                    case 1: // Nhập tên vật liệu
+                        {
+                            Console.Write("Nhập tên vật liệu: ");
+                            Ten = Console.ReadLine();
+                            break;
+                        }
+                    case 2: // Nhập giá
+                        {
+                            Console.Write("Nhập giá         : ");
+                            Gia = Input.NhapSoNguyen();
+                            break;
+                        }
+                    case 3: // Nhập số lượng
+                        {
+                            Console.Write("Nhập số lượng    : ");
+                            soLuong = Input.NhapSoNguyen();
+                            break;
+                        }
+                    case 10: //Thoát và Lưu Đối Tượng
+                        {
+                            Program.Programming(arrVatLieu);
+                            break;
+                        }
+                    default:
+                        {
+                            Console.WriteLine("Lựa chọn không hợp lệ!");
+                            break;
+                        }
+                }
+            }while (true);
         }
         public virtual void XuatThongTin()
         {

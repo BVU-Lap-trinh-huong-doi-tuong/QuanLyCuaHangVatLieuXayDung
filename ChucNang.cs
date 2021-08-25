@@ -16,7 +16,8 @@ namespace QuanLyCuaHangVatLieuXayDung
                 return int.Parse(Console.ReadLine());
             }
         }
-        //Xong Tạo Đối Tượng
+        
+        //Tạo Đối Tượng
         public static void CreateObject(ArrayList arrVatLieu)
         {
             Console.Title = "Tạo Đối Tượng Mới | " + Program.Name;
@@ -31,9 +32,9 @@ namespace QuanLyCuaHangVatLieuXayDung
                             Console.Clear();
                             Console.Title = "Tạo Vật Liệu Cát";
                             Console.WriteLine("Tạo Vật Liệu Cát");
-                            CatXayDung catXayDung = new CatXayDung();
-                            catXayDung.NhapThongTin();
+                            Cat catXayDung = new Cat();
                             arrVatLieu.Add(catXayDung);
+                            catXayDung.NhapThongTin(arrVatLieu);
                             //iSoLuongVL++;
                             break;
                         }
@@ -42,9 +43,9 @@ namespace QuanLyCuaHangVatLieuXayDung
                             Console.Clear();
                             Console.Title = "Tạo Vật Liệu Đá";
                             Console.WriteLine("Tạo Vật Liệu Đá");
-                            DaXayDung daXayDung = new DaXayDung();
-                            daXayDung.NhapThongTin();
+                            Da daXayDung = new Da();
                             arrVatLieu.Add(daXayDung);
+                            daXayDung.NhapThongTin(arrVatLieu);
                             //iSoLuongVL++;
                             break;
                         }
@@ -53,9 +54,9 @@ namespace QuanLyCuaHangVatLieuXayDung
                             Console.Clear();
                             Console.Title = "Tạo Vật Liệu Ximăng";
                             Console.WriteLine("Tạo Vật Liệu Ximăng");
-                            XimangXayDung ximangXayDung = new XimangXayDung();
-                            ximangXayDung.NhapThongTin();
+                            Ximang ximangXayDung = new Ximang();
                             arrVatLieu.Add(ximangXayDung);
+                            ximangXayDung.NhapThongTin(arrVatLieu);
                             //iSoLuongVL++;
                             break;
                         }
@@ -64,9 +65,9 @@ namespace QuanLyCuaHangVatLieuXayDung
                             Console.Clear();
                             Console.Title = "Tạo Vật Liệu Gạch";
                             Console.WriteLine("Tạo Vật Liệu Gạch");
-                            GachXayDung gachXayDung = new GachXayDung();
-                            gachXayDung.NhapThongTin();
+                            Gach gachXayDung = new Gach();
                             arrVatLieu.Add(gachXayDung);
+                            gachXayDung.NhapThongTin(arrVatLieu);
                             //iSoLuongVL++;
                             break;
                         }
@@ -75,9 +76,9 @@ namespace QuanLyCuaHangVatLieuXayDung
                             Console.Clear();
                             Console.Title = "Vật Liệu Sắt Thép";
                             Console.WriteLine("Vật Liệu Sắt Thép");
-                            SatThepXayDung satThepXayDung = new SatThepXayDung();
-                            satThepXayDung.NhapThongTin();
+                            SatThep satThepXayDung = new SatThep();
                             arrVatLieu.Add(satThepXayDung);
+                            satThepXayDung.NhapThongTin(arrVatLieu);
                             break;
                         }
                     case 6:
@@ -86,8 +87,8 @@ namespace QuanLyCuaHangVatLieuXayDung
                             Console.Title = "Vật Liệu Gỗ";
                             Console.WriteLine("Vật Liệu Gỗ");
                             Go go = new Go();
-                            go.NhapThongTin();
                             arrVatLieu.Add(go);
+                            go.NhapThongTin(arrVatLieu);
                             break;
                         }
                     case 7:
@@ -96,8 +97,8 @@ namespace QuanLyCuaHangVatLieuXayDung
                             Console.Title = "Vật Liệu Thủy Tinh";
                             Console.WriteLine("Vật Liệu Thủy Tinh");
                             ThuyTinh thuyTinh = new ThuyTinh();
-                            thuyTinh.NhapThongTin();
                             arrVatLieu.Add(thuyTinh);
+                            thuyTinh.NhapThongTin(arrVatLieu);
                             break;
                         }
                     case 8:
@@ -106,8 +107,8 @@ namespace QuanLyCuaHangVatLieuXayDung
                             Console.Title = "Vật Liệu Nhựa";
                             Console.WriteLine("Vật Liệu Nhựa");
                             Nhua nhua = new Nhua();
-                            nhua.NhapThongTin();
                             arrVatLieu.Add(nhua);
+                            nhua.NhapThongTin(arrVatLieu);
                             break;
                         }
                     case 9:
@@ -116,8 +117,8 @@ namespace QuanLyCuaHangVatLieuXayDung
                             Console.Title = "Vật Liệu Sứ";
                             Console.WriteLine("Vật Liệu Sứ");
                             Su su = new Su();
-                            su.NhapThongTin();
                             arrVatLieu.Add(su);
+                            su.NhapThongTin(arrVatLieu);
                             break;
                         }
                     case 0:
@@ -137,57 +138,57 @@ namespace QuanLyCuaHangVatLieuXayDung
         {
             for (int iThuTu = 0; iThuTu < arrVatLieu.Count; iThuTu++)
             {
-                CatXayDung cat = new CatXayDung();
+                Cat cat = new Cat();
                 Type ia = arrVatLieu[iThuTu].GetType();
                 Type ib = cat.GetType();
                 if (ia.Equals(ib))
                 {
-                    cat = (CatXayDung)arrVatLieu[iThuTu];
+                    cat = (Cat)arrVatLieu[iThuTu];
                     cat.XuatThongTin();
                 }
             }
         }
         public static void XuatDa(ArrayList arrVatLieu, int iThuTu)
         {
-            DaXayDung da = new DaXayDung();
+            Da da = new Da();
             Type ia = arrVatLieu[iThuTu].GetType();
             Type ib = da.GetType();
             if (ia.Equals(ib))
             {
-                da = (DaXayDung)arrVatLieu[iThuTu];
+                da = (Da)arrVatLieu[iThuTu];
                 da.XuatThongTin();
             }
         }
         public static void XuatXiMang(ArrayList arrVatLieu, int iThuTu)
         {
-            XimangXayDung xiMang = new XimangXayDung();
+            Ximang xiMang = new Ximang();
             Type ia = arrVatLieu[iThuTu].GetType();
             Type ib = xiMang.GetType();
             if (ia.Equals(ib))
             {
-                xiMang = (XimangXayDung)arrVatLieu[iThuTu];
+                xiMang = (Ximang)arrVatLieu[iThuTu];
                 xiMang.XuatThongTin();
             }
         }
         public static void XuatGach(ArrayList arrVatLieu, int iThuTu)
         {
-            GachXayDung gach = new GachXayDung();
+            Gach gach = new Gach();
             Type ia = arrVatLieu[iThuTu].GetType();
             Type ib = gach.GetType();
             if (ia.Equals(ib))
             {
-                gach = (GachXayDung)arrVatLieu[iThuTu];
+                gach = (Gach)arrVatLieu[iThuTu];
                 gach.XuatThongTin();
             }
         }
         public static void XuatSatThep(ArrayList arrVatLieu, int iThuTu)
         {
-            SatThepXayDung satThep = new SatThepXayDung();
+            SatThep satThep = new SatThep();
             Type ia = arrVatLieu[iThuTu].GetType();
             Type ib = satThep.GetType();
             if (ia.Equals(ib))
             {
-                satThep = (SatThepXayDung)arrVatLieu[iThuTu];
+                satThep = (SatThep)arrVatLieu[iThuTu];
                 satThep.XuatThongTin();
             }
         }
@@ -241,17 +242,13 @@ namespace QuanLyCuaHangVatLieuXayDung
             {
                 Menu.MenuShowSingleObject();
                 Console.Title = "Hiện Một Đối Tượng | " + Program.Name;
-                switch (ReturnNumberInput())
+                switch (Input.NhapSoNguyen())
                 {
                     case 1:
                         {
                             Console.WriteLine("Vật Liệu Cát");
-                            /*for (int iThuTu = 0; iThuTu < arrVatLieu.Count; iThuTu++)
-                            {
-                                XuatCat(arrVatLieu, iThuTu);
-                            }
-                            Task.Delay(600);*/
                             XuatCat(arrVatLieu);
+                            Console.ReadLine();
                             break;
                         }
                     case 2:
@@ -261,6 +258,7 @@ namespace QuanLyCuaHangVatLieuXayDung
                             {
                                 XuatDa(arrVatLieu, iThuTu);
                             }
+                            Console.ReadLine();
                             break;
                         }
                     case 3:
@@ -270,6 +268,7 @@ namespace QuanLyCuaHangVatLieuXayDung
                             {
                                 XuatXiMang(arrVatLieu, iThuTu);
                             }
+                            Console.ReadLine();
                             break;
                         }
                     case 4:
@@ -279,6 +278,7 @@ namespace QuanLyCuaHangVatLieuXayDung
                             {
                                 XuatGach(arrVatLieu, iThuTu);
                             }
+                            Console.ReadLine();
                             break;
                         }
                     case 5:
@@ -288,6 +288,7 @@ namespace QuanLyCuaHangVatLieuXayDung
                             {
                                 XuatSatThep(arrVatLieu, iThuTu);
                             }
+                            Console.ReadLine();
                             break;
                         }
                     case 6:
@@ -297,6 +298,7 @@ namespace QuanLyCuaHangVatLieuXayDung
                             {
                                 XuatGo(arrVatLieu, iThuTu);
                             }
+                            Console.ReadLine();
                             break;
                         }
                     case 7:
@@ -306,6 +308,7 @@ namespace QuanLyCuaHangVatLieuXayDung
                             {
                                 XuatThuyTinh(arrVatLieu, iThuTu);
                             }
+                            Console.ReadLine();
                             break;
                         }
                     case 8:
@@ -315,6 +318,7 @@ namespace QuanLyCuaHangVatLieuXayDung
                             {
                                 XuatNhua(arrVatLieu, iThuTu);
                             }
+                            Console.ReadLine();
                             break;
                         }
                     case 9:
@@ -324,6 +328,7 @@ namespace QuanLyCuaHangVatLieuXayDung
                             {
                                 XuatSu(arrVatLieu, iThuTu);
                             }
+                            Console.ReadLine();
                             break;
                         }
                     case 0:
@@ -346,12 +351,84 @@ namespace QuanLyCuaHangVatLieuXayDung
                 Console.Title = "Hiện và Sắp Xếp Đối Tượng | " + Program.Name;
                 switch (ReturnNumberInput())
                 {
-                    case 1:
+                    case 1: //Hiện Một Loại Đối Tượng
                         {
                             ShowSingleObject(arrVatLieu);
                             break;
                         }
-                    case 2:
+                    case 2: //Hiện Tất Cả Đối Tượng
+                        {
+                            for (int iThuTu = 0; iThuTu < arrVatLieu.Count; iThuTu++)
+                            {
+                                Cat cat = new Cat();
+                                Da da = new Da();
+                                Ximang ximang = new Ximang();
+                                Gach gach = new Gach();
+                                SatThep satThep = new SatThep();
+                                Go go = new Go();
+                                ThuyTinh thuyTinh = new ThuyTinh();
+                                Nhua nhua = new Nhua();
+                                Su su = new Su();
+
+                                Type ia = arrVatLieu[iThuTu].GetType();
+                                Type iCat = cat.GetType();
+                                Type iDa = da.GetType();
+                                Type iXimang = ximang.GetType();
+                                Type iGach = gach.GetType();
+                                Type iSatThep = satThep.GetType();
+                                Type iGo = go.GetType();
+                                Type iThuyTinh = thuyTinh.GetType();
+                                Type iNhua = nhua.GetType();
+                                Type iSu = su.GetType();
+
+                                if (ia.Equals(iCat))
+                                {
+                                    cat = (Cat)arrVatLieu[iThuTu];
+                                    cat.XuatThongTin();
+                                }
+                                else if (ia.Equals(iDa))
+                                {
+                                    da = (Da)arrVatLieu[iThuTu];
+                                    da.XuatThongTin();
+                                }
+                                else if (ia.Equals(iXimang))
+                                {
+                                    ximang = (Ximang)arrVatLieu[iThuTu];
+                                    ximang.XuatThongTin();
+                                }
+                                else if (ia.Equals(iGach))
+                                {
+                                    gach = (Gach)arrVatLieu[iThuTu];
+                                    gach.XuatThongTin();
+                                }
+                                else if (ia.Equals(iSatThep))
+                                {
+                                    satThep = (SatThep)arrVatLieu[iThuTu];
+                                    satThep.XuatThongTin();
+                                }
+                                else if (ia.Equals(iGo))
+                                {
+                                    go = (Go)arrVatLieu[iThuTu];
+                                    go.XuatThongTin();
+                                }
+                                else if (ia.Equals(iThuyTinh))
+                                {
+                                    thuyTinh = (ThuyTinh)arrVatLieu[iThuTu];
+                                    thuyTinh.XuatThongTin();
+                                }
+                                else if (ia.Equals(iNhua))
+                                {
+                                    nhua = (Nhua)arrVatLieu[iThuTu];
+                                    nhua.XuatThongTin();
+                                }
+                            }
+                            
+                            Console.ReadLine();
+                            Program.Programming(arrVatLieu);
+                            
+                            break;
+                        }
+                    case 3: //Sắp Xếp Tất Cả Đối Tượng
                         {
                             SapXepTheoGia(arrVatLieu);
                             Console.ReadLine();
@@ -387,6 +464,9 @@ namespace QuanLyCuaHangVatLieuXayDung
                 arrTam[i].XuatThongTin();
             }
         }
-    
+        public static void UpdateObject(ArrayList arrVatLieu)
+        {
+
+        }
     }
 }

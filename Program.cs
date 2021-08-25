@@ -43,6 +43,8 @@ namespace QuanLyCuaHangVatLieuXayDung
                     }
                 case 3: //Cập nhật đối tượng
                     {
+                        Console.Clear();
+                        ChucNang.UpdateObject(arrVatLieu);
                         break;
                     }
                 default:

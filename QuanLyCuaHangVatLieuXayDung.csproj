@@ -43,21 +43,21 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="CatXayDung.cs" />
+    <Compile Include="Cat.cs" />
     <Compile Include="ChucNang.cs" />
-    <Compile Include="DaXayDung.cs" />
-    <Compile Include="GachXayDung.cs" />
+    <Compile Include="Da.cs" />
+    <Compile Include="Gach.cs" />
     <Compile Include="Go.cs" />
     <Compile Include="Input.cs" />
     <Compile Include="Menu.cs" />
     <Compile Include="Nhua.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="SatThepXayDung.cs" />
+    <Compile Include="SatThep.cs" />
     <Compile Include="Su.cs" />
     <Compile Include="ThuyTinh.cs" />
     <Compile Include="VatLieu.cs" />
-    <Compile Include="XimangXayDung.cs" />
+    <Compile Include="Ximang.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
