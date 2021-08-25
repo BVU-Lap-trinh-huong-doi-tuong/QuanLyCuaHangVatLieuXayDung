@@ -7,7 +7,14 @@ namespace QuanLyCuaHangVatLieuXayDung
     {
         public static int ReturnNumberInput()
         {
-            return int.Parse(Console.ReadLine());
+            try { 
+                return int.Parse(Console.ReadLine());
+            }
+            catch
+            {
+                Console.WriteLine("Nhập lại nào: ");
+                return int.Parse(Console.ReadLine());
+            }
         }
         //Xong Tạo Đối Tượng
         public static void CreateObject(ArrayList arrVatLieu)

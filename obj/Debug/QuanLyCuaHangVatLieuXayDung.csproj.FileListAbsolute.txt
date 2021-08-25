@@ -12,10 +12,10 @@ D:\GitHub\QuanLyCuaHangVatLieuXayDung\obj\Debug\QuanLyCuaHangVatLieuXayDung.pdb
 D:\GitHub\QuanLyCuaHangVatLieuXayDung\bin\Debug\QuanLyCuaHangVatLieuXayDung.exe.config
 D:\GitHub\QuanLyCuaHangVatLieuXayDung\bin\Debug\QuanLyCuaHangVatLieuXayDung.exe
 D:\GitHub\QuanLyCuaHangVatLieuXayDung\bin\Debug\QuanLyCuaHangVatLieuXayDung.pdb
-D:\GitHub\DH20LT\QuanLyCuaHangVatLieuXayDung\bin\Debug\QuanLyCuaHangVatLieuXayDung.exe.config
-D:\GitHub\DH20LT\QuanLyCuaHangVatLieuXayDung\bin\Debug\QuanLyCuaHangVatLieuXayDung.exe
-D:\GitHub\DH20LT\QuanLyCuaHangVatLieuXayDung\bin\Debug\QuanLyCuaHangVatLieuXayDung.pdb
-D:\GitHub\DH20LT\QuanLyCuaHangVatLieuXayDung\obj\Debug\QuanLyCuaHangVatLieuXayDung.csproj.AssemblyReference.cache
-D:\GitHub\DH20LT\QuanLyCuaHangVatLieuXayDung\obj\Debug\QuanLyCuaHangVatLieuXayDung.csproj.CoreCompileInputs.cache
-D:\GitHub\DH20LT\QuanLyCuaHangVatLieuXayDung\obj\Debug\QuanLyCuaHangVatLieuXayDung.exe
-D:\GitHub\DH20LT\QuanLyCuaHangVatLieuXayDung\obj\Debug\QuanLyCuaHangVatLieuXayDung.pdb
+D:\GitHub\SendToTeacher\QuanLyCuaHangVatLieuXayDung\bin\Debug\QuanLyCuaHangVatLieuXayDung.exe.config
+D:\GitHub\SendToTeacher\QuanLyCuaHangVatLieuXayDung\bin\Debug\QuanLyCuaHangVatLieuXayDung.exe
+D:\GitHub\SendToTeacher\QuanLyCuaHangVatLieuXayDung\bin\Debug\QuanLyCuaHangVatLieuXayDung.pdb
+D:\GitHub\SendToTeacher\QuanLyCuaHangVatLieuXayDung\obj\Debug\QuanLyCuaHangVatLieuXayDung.csproj.AssemblyReference.cache
+D:\GitHub\SendToTeacher\QuanLyCuaHangVatLieuXayDung\obj\Debug\QuanLyCuaHangVatLieuXayDung.csproj.CoreCompileInputs.cache
+D:\GitHub\SendToTeacher\QuanLyCuaHangVatLieuXayDung\obj\Debug\QuanLyCuaHangVatLieuXayDung.exe
+D:\GitHub\SendToTeacher\QuanLyCuaHangVatLieuXayDung\obj\Debug\QuanLyCuaHangVatLieuXayDung.pdb
