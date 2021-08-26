@@ -1,0 +1,34 @@
+D:\OneDrive\Project\Programming Project\Môn Lập trình hướng đối tượng\QuanLyCuaHangVatLieuXayDung\obj\Debug\QuanLyCuaHangVatLieuXayDung.csproj.AssemblyReference.cache
+D:\OneDrive\Project\Programming Project\Môn Lập trình hướng đối tượng\QuanLyCuaHangVatLieuXayDung\obj\Debug\QuanLyCuaHangVatLieuXayDung.csproj.CoreCompileInputs.cache
+D:\OneDrive\Project\Programming Project\Môn Lập trình hướng đối tượng\QuanLyCuaHangVatLieuXayDung\bin\Debug\QuanLyCuaHangVatLieuXayDung.exe.config
+D:\OneDrive\Project\Programming Project\Môn Lập trình hướng đối tượng\QuanLyCuaHangVatLieuXayDung\bin\Debug\QuanLyCuaHangVatLieuXayDung.exe
+D:\OneDrive\Project\Programming Project\Môn Lập trình hướng đối tượng\QuanLyCuaHangVatLieuXayDung\bin\Debug\QuanLyCuaHangVatLieuXayDung.pdb
+D:\OneDrive\Project\Programming Project\Môn Lập trình hướng đối tượng\QuanLyCuaHangVatLieuXayDung\obj\Debug\QuanLyCuaHangVatLieuXayDung.exe
+D:\OneDrive\Project\Programming Project\Môn Lập trình hướng đối tượng\QuanLyCuaHangVatLieuXayDung\obj\Debug\QuanLyCuaHangVatLieuXayDung.pdb
+D:\GitHub\QuanLyCuaHangVatLieuXayDung\obj\Debug\QuanLyCuaHangVatLieuXayDung.csproj.AssemblyReference.cache
+D:\GitHub\QuanLyCuaHangVatLieuXayDung\obj\Debug\QuanLyCuaHangVatLieuXayDung.csproj.CoreCompileInputs.cache
+D:\GitHub\QuanLyCuaHangVatLieuXayDung\obj\Debug\QuanLyCuaHangVatLieuXayDung.exe
+D:\GitHub\QuanLyCuaHangVatLieuXayDung\obj\Debug\QuanLyCuaHangVatLieuXayDung.pdb
+D:\GitHub\QuanLyCuaHangVatLieuXayDung\bin\Debug\QuanLyCuaHangVatLieuXayDung.exe.config
+D:\GitHub\QuanLyCuaHangVatLieuXayDung\bin\Debug\QuanLyCuaHangVatLieuXayDung.exe
+D:\GitHub\QuanLyCuaHangVatLieuXayDung\bin\Debug\QuanLyCuaHangVatLieuXayDung.pdb
+D:\GitHub\SendToTeacher\QuanLyCuaHangVatLieuXayDung\bin\Debug\QuanLyCuaHangVatLieuXayDung.exe.config
+D:\GitHub\SendToTeacher\QuanLyCuaHangVatLieuXayDung\bin\Debug\QuanLyCuaHangVatLieuXayDung.exe
+D:\GitHub\SendToTeacher\QuanLyCuaHangVatLieuXayDung\bin\Debug\QuanLyCuaHangVatLieuXayDung.pdb
+D:\GitHub\SendToTeacher\QuanLyCuaHangVatLieuXayDung\obj\Debug\QuanLyCuaHangVatLieuXayDung.csproj.AssemblyReference.cache
+D:\GitHub\SendToTeacher\QuanLyCuaHangVatLieuXayDung\obj\Debug\QuanLyCuaHangVatLieuXayDung.csproj.CoreCompileInputs.cache
+D:\GitHub\SendToTeacher\QuanLyCuaHangVatLieuXayDung\obj\Debug\QuanLyCuaHangVatLieuXayDung.exe
+D:\GitHub\SendToTeacher\QuanLyCuaHangVatLieuXayDung\obj\Debug\QuanLyCuaHangVatLieuXayDung.pdb
+D:\GitHub\DH20LT\QuanLyCuaHangVatLieuXayDung\bin\Debug\QuanLyCuaHangVatLieuXayDung.exe.config
+D:\GitHub\DH20LT\QuanLyCuaHangVatLieuXayDung\bin\Debug\QuanLyCuaHangVatLieuXayDung.exe
+D:\GitHub\DH20LT\QuanLyCuaHangVatLieuXayDung\bin\Debug\QuanLyCuaHangVatLieuXayDung.pdb
+D:\GitHub\DH20LT\QuanLyCuaHangVatLieuXayDung\obj\Debug\QuanLyCuaHangVatLieuXayDung.csproj.AssemblyReference.cache
+D:\GitHub\DH20LT\QuanLyCuaHangVatLieuXayDung\obj\Debug\QuanLyCuaHangVatLieuXayDung.csproj.CoreCompileInputs.cache
+D:\GitHub\DH20LT\QuanLyCuaHangVatLieuXayDung\obj\Debug\QuanLyCuaHangVatLieuXayDung.exe
+D:\GitHub\DH20LT\QuanLyCuaHangVatLieuXayDung\obj\Debug\QuanLyCuaHangVatLieuXayDung.pdb
+D:\GitHub\DH20LT\QuanLyCuaHangVatLieuXayDung\bin\Debug\NStack.dll
+D:\GitHub\DH20LT\QuanLyCuaHangVatLieuXayDung\bin\Debug\System.ValueTuple.dll
+D:\GitHub\DH20LT\QuanLyCuaHangVatLieuXayDung\bin\Debug\Terminal.Gui.dll
+D:\GitHub\DH20LT\QuanLyCuaHangVatLieuXayDung\bin\Debug\System.ValueTuple.xml
+D:\GitHub\DH20LT\QuanLyCuaHangVatLieuXayDung\bin\Debug\Terminal.Gui.xml
+D:\GitHub\DH20LT\QuanLyCuaHangVatLieuXayDung\obj\Debug\QuanLyCuaHangVatLieuXayDung.csproj.CopyComplete
