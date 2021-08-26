@@ -1,6 +1,6 @@
 ﻿using System.Collections;
 
-namespace QuanLyCuaHangVatLieuXayDung
+namespace QuanLyCuaHangVatLieuXayDung.LoaiVatLieu
 {
     class SatThep : VatLieu
     {

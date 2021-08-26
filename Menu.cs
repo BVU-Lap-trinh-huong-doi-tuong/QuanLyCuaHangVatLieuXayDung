@@ -10,6 +10,8 @@ namespace QuanLyCuaHangVatLieuXayDung
             Console.WriteLine("| 0. Test từng phần của chương trình   |");
             Console.WriteLine("| 1. Tạo Đối Tượng Vật Liệu            |");
             Console.WriteLine("| 2. Hiện Đối Tượng Vật Liệu           |");
+            Console.WriteLine("| 3. Cập Nhật Đối Tượng Vật Liệu       |");
+            Console.WriteLine("| 4. Tìm Đối Tượng Vật Liệu            |");
             Console.WriteLine("========================================");
             Console.Write("Chọn chức năng bằng số: ");
         }

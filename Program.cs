@@ -47,6 +47,15 @@ namespace QuanLyCuaHangVatLieuXayDung
                         ChucNang.UpdateObject(arrVatLieu);
                         break;
                     }
+                case 4: //Tìm đối tượng theo tên
+                    {
+                        Console.Clear();
+                        Console.Write("Nhập từ khoá: ");
+                        string keyword = Console.ReadLine();
+                        ChucNang.ShowAllObject(ChucNang.SearchObject(arrVatLieu, keyword));
+                        Console.ReadLine();
+                        break;
+                    }
                 default:
                     {
                         Console.WriteLine("Sai chức năng");

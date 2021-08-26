@@ -1,6 +1,7 @@
 ﻿using System.Collections;
+using QuanLyCuaHangVatLieuXayDung.LoaiVatLieu;
 
-namespace QuanLyCuaHangVatLieuXayDung
+namespace QuanLyCuaHangVatLieuXayDung.LoaiVatLieu
 {
     class Cat : VatLieu
     {

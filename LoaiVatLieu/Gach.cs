@@ -1,16 +1,16 @@
 ﻿using System.Collections;
 
-namespace QuanLyCuaHangVatLieuXayDung
+namespace QuanLyCuaHangVatLieuXayDung.LoaiVatLieu
 {
-    class Nhua : VatLieu
+    class Gach : VatLieu
     {
-        public Nhua()
+        public Gach()
         {
-            setLoaiVatLieu(8);
+            setLoaiVatLieu(4);
         }
         public override string donViTinh()
         {
-            return " Cây (11.7m)";
+            return " viên";
         }
         public override void NhapThongTin(ArrayList arrVatLieu)
         {

@@ -1,19 +1,19 @@
 ﻿using System.Collections;
 
-namespace QuanLyCuaHangVatLieuXayDung
+namespace QuanLyCuaHangVatLieuXayDung.LoaiVatLieu
 {
-    class Ximang : VatLieu
+    class Da : VatLieu
     {
-        public Ximang()
+        public Da()
         {
-            setLoaiVatLieu(2);
+            setTen(" ");
             setSoLuong(0);
             setGia(0);
             setLoaiVatLieu(2);
         }
         public override string donViTinh()
         {
-            return " bao";
+            return " 1m3";
         }
         public override void NhapThongTin(ArrayList arrVatLieu)
         {

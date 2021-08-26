@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections;
+using QuanLyCuaHangVatLieuXayDung.LoaiVatLieu;
 
 namespace QuanLyCuaHangVatLieuXayDung
 {
@@ -134,108 +135,6 @@ namespace QuanLyCuaHangVatLieuXayDung
         }
         // Sắp xếp
         //Xuất Đối tượng
-        public static void XuatCat(ArrayList arrVatLieu)
-        {
-            for (int iThuTu = 0; iThuTu < arrVatLieu.Count; iThuTu++)
-            {
-                Cat cat = new Cat();
-                Type ia = arrVatLieu[iThuTu].GetType();
-                Type ib = cat.GetType();
-                if (ia.Equals(ib))
-                {
-                    cat = (Cat)arrVatLieu[iThuTu];
-                    cat.XuatThongTin();
-                }
-            }
-        }
-        public static void XuatDa(ArrayList arrVatLieu, int iThuTu)
-        {
-            Da da = new Da();
-            Type ia = arrVatLieu[iThuTu].GetType();
-            Type ib = da.GetType();
-            if (ia.Equals(ib))
-            {
-                da = (Da)arrVatLieu[iThuTu];
-                da.XuatThongTin();
-            }
-        }
-        public static void XuatXiMang(ArrayList arrVatLieu, int iThuTu)
-        {
-            Ximang xiMang = new Ximang();
-            Type ia = arrVatLieu[iThuTu].GetType();
-            Type ib = xiMang.GetType();
-            if (ia.Equals(ib))
-            {
-                xiMang = (Ximang)arrVatLieu[iThuTu];
-                xiMang.XuatThongTin();
-            }
-        }
-        public static void XuatGach(ArrayList arrVatLieu, int iThuTu)
-        {
-            Gach gach = new Gach();
-            Type ia = arrVatLieu[iThuTu].GetType();
-            Type ib = gach.GetType();
-            if (ia.Equals(ib))
-            {
-                gach = (Gach)arrVatLieu[iThuTu];
-                gach.XuatThongTin();
-            }
-        }
-        public static void XuatSatThep(ArrayList arrVatLieu, int iThuTu)
-        {
-            SatThep satThep = new SatThep();
-            Type ia = arrVatLieu[iThuTu].GetType();
-            Type ib = satThep.GetType();
-            if (ia.Equals(ib))
-            {
-                satThep = (SatThep)arrVatLieu[iThuTu];
-                satThep.XuatThongTin();
-            }
-        }
-        public static void XuatGo(ArrayList arrVatLieu, int iThuTu)
-        {
-            Go go = new Go();
-            Type ia = arrVatLieu[iThuTu].GetType();
-            Type ib = go.GetType();
-            if (ia.Equals(ib))
-            {
-                go = (Go)arrVatLieu[iThuTu];
-                go.XuatThongTin();
-            }
-        }
-        public static void XuatThuyTinh(ArrayList arrVatLieu, int iThuTu)
-        {
-            ThuyTinh thuyTinh = new ThuyTinh();
-            Type ia = arrVatLieu[iThuTu].GetType();
-            Type ib = thuyTinh.GetType();
-            if (ia.Equals(ib))
-            {
-                thuyTinh = (ThuyTinh)arrVatLieu[iThuTu];
-                thuyTinh.XuatThongTin();
-            }
-        }
-        public static void XuatNhua(ArrayList arrVatLieu, int iThuTu)
-        {
-            Nhua nhua = new Nhua();
-            Type ia = arrVatLieu[iThuTu].GetType();
-            Type ib = nhua.GetType();
-            if (ia.Equals(ib))
-            {
-                nhua = (Nhua)arrVatLieu[iThuTu];
-                nhua.XuatThongTin();
-            }
-        }
-        public static void XuatSu(ArrayList arrVatLieu, int iThuTu)
-        {
-            Su su = new Su();
-            Type ia = arrVatLieu[iThuTu].GetType();
-            Type ib = su.GetType();
-            if (ia.Equals(ib))
-            {
-                su = (Su)arrVatLieu[iThuTu];
-                su.XuatThongTin();
-            }
-        }
         public static void ShowSingleObject(ArrayList arrVatLieu)
         {
             do
@@ -342,6 +241,75 @@ namespace QuanLyCuaHangVatLieuXayDung
                 }
             } while (true);
         }
+        public static void ShowAllObject(ArrayList arrVatLieu)
+        {
+            for (int iThuTu = 0; iThuTu < arrVatLieu.Count; iThuTu++)
+            {
+                Cat cat = new Cat();
+                Da da = new Da();
+                Ximang ximang = new Ximang();
+                Gach gach = new Gach();
+                SatThep satThep = new SatThep();
+                Go go = new Go();
+                ThuyTinh thuyTinh = new ThuyTinh();
+                Nhua nhua = new Nhua();
+                Su su = new Su();
+
+                Type ia = arrVatLieu[iThuTu].GetType();
+                Type iCat = cat.GetType();
+                Type iDa = da.GetType();
+                Type iXimang = ximang.GetType();
+                Type iGach = gach.GetType();
+                Type iSatThep = satThep.GetType();
+                Type iGo = go.GetType();
+                Type iThuyTinh = thuyTinh.GetType();
+                Type iNhua = nhua.GetType();
+                Type iSu = su.GetType();
+
+                if (ia.Equals(iCat))
+                {
+                    cat = (Cat)arrVatLieu[iThuTu];
+                    cat.XuatThongTin();
+                }
+                else if (ia.Equals(iDa))
+                {
+                    da = (Da)arrVatLieu[iThuTu];
+                    da.XuatThongTin();
+                }
+                else if (ia.Equals(iXimang))
+                {
+                    ximang = (Ximang)arrVatLieu[iThuTu];
+                    ximang.XuatThongTin();
+                }
+                else if (ia.Equals(iGach))
+                {
+                    gach = (Gach)arrVatLieu[iThuTu];
+                    gach.XuatThongTin();
+                }
+                else if (ia.Equals(iSatThep))
+                {
+                    satThep = (SatThep)arrVatLieu[iThuTu];
+                    satThep.XuatThongTin();
+                }
+                else if (ia.Equals(iGo))
+                {
+                    go = (Go)arrVatLieu[iThuTu];
+                    go.XuatThongTin();
+                }
+                else if (ia.Equals(iThuyTinh))
+                {
+                    thuyTinh = (ThuyTinh)arrVatLieu[iThuTu];
+                    thuyTinh.XuatThongTin();
+                }
+                else if (ia.Equals(iNhua))
+                {
+                    nhua = (Nhua)arrVatLieu[iThuTu];
+                    nhua.XuatThongTin();
+                }
+            }
+
+            Console.ReadLine();
+        }
         public static void ShowObject(ArrayList arrVatLieu)
         {
             do
@@ -358,72 +326,7 @@ namespace QuanLyCuaHangVatLieuXayDung
                         }
                     case 2: //Hiện Tất Cả Đối Tượng
                         {
-                            for (int iThuTu = 0; iThuTu < arrVatLieu.Count; iThuTu++)
-                            {
-                                Cat cat = new Cat();
-                                Da da = new Da();
-                                Ximang ximang = new Ximang();
-                                Gach gach = new Gach();
-                                SatThep satThep = new SatThep();
-                                Go go = new Go();
-                                ThuyTinh thuyTinh = new ThuyTinh();
-                                Nhua nhua = new Nhua();
-                                Su su = new Su();
-
-                                Type ia = arrVatLieu[iThuTu].GetType();
-                                Type iCat = cat.GetType();
-                                Type iDa = da.GetType();
-                                Type iXimang = ximang.GetType();
-                                Type iGach = gach.GetType();
-                                Type iSatThep = satThep.GetType();
-                                Type iGo = go.GetType();
-                                Type iThuyTinh = thuyTinh.GetType();
-                                Type iNhua = nhua.GetType();
-                                Type iSu = su.GetType();
-
-                                if (ia.Equals(iCat))
-                                {
-                                    cat = (Cat)arrVatLieu[iThuTu];
-                                    cat.XuatThongTin();
-                                }
-                                else if (ia.Equals(iDa))
-                                {
-                                    da = (Da)arrVatLieu[iThuTu];
-                                    da.XuatThongTin();
-                                }
-                                else if (ia.Equals(iXimang))
-                                {
-                                    ximang = (Ximang)arrVatLieu[iThuTu];
-                                    ximang.XuatThongTin();
-                                }
-                                else if (ia.Equals(iGach))
-                                {
-                                    gach = (Gach)arrVatLieu[iThuTu];
-                                    gach.XuatThongTin();
-                                }
-                                else if (ia.Equals(iSatThep))
-                                {
-                                    satThep = (SatThep)arrVatLieu[iThuTu];
-                                    satThep.XuatThongTin();
-                                }
-                                else if (ia.Equals(iGo))
-                                {
-                                    go = (Go)arrVatLieu[iThuTu];
-                                    go.XuatThongTin();
-                                }
-                                else if (ia.Equals(iThuyTinh))
-                                {
-                                    thuyTinh = (ThuyTinh)arrVatLieu[iThuTu];
-                                    thuyTinh.XuatThongTin();
-                                }
-                                else if (ia.Equals(iNhua))
-                                {
-                                    nhua = (Nhua)arrVatLieu[iThuTu];
-                                    nhua.XuatThongTin();
-                                }
-                            }
-                            
-                            Console.ReadLine();
+                            ShowAllObject(arrVatLieu);
                             Program.Programming(arrVatLieu);
                             
                             break;
@@ -467,6 +370,209 @@ namespace QuanLyCuaHangVatLieuXayDung
         public static void UpdateObject(ArrayList arrVatLieu)
         {
 
+        }
+        public static ArrayList SearchObject(ArrayList arrVatLieu, string keyword)
+        {
+            ArrayList KetQua = new ArrayList();
+            for (int iThuTu = 0; iThuTu < arrVatLieu.Count; iThuTu++)
+            {
+                Cat cat = new Cat();
+                Da da = new Da();
+                Ximang ximang = new Ximang();
+                Gach gach = new Gach();
+                SatThep satThep = new SatThep();
+                Go go = new Go();
+                ThuyTinh thuyTinh = new ThuyTinh();
+                Nhua nhua = new Nhua();
+                Su su = new Su();
+
+                Type ia = arrVatLieu[iThuTu].GetType();
+                Type iCat = cat.GetType();
+                Type iDa = da.GetType();
+                Type iXimang = ximang.GetType();
+                Type iGach = gach.GetType();
+                Type iSatThep = satThep.GetType();
+                Type iGo = go.GetType();
+                Type iThuyTinh = thuyTinh.GetType();
+                Type iNhua = nhua.GetType();
+                Type iSu = su.GetType();
+                if(ia.Equals(iCat))
+                {
+                    cat = (Cat)arrVatLieu[iThuTu];
+                    if(cat.getTen().ToLower().Contains(keyword.ToLower()))
+                    {
+                        KetQua.Add(cat);
+                    }
+                }
+                else if(ia.Equals(iDa))
+                {
+                    da = (Da)arrVatLieu[iThuTu];
+                    if (da.getTen().ToLower().Contains(keyword.ToLower()))
+                    {
+                        KetQua.Add(da);
+                    }
+                }
+                else if (ia.Equals(iXimang))
+                {
+                    ximang = (Ximang)arrVatLieu[iThuTu];
+                    if (ximang.getTen().ToLower().Contains(keyword.ToLower()))
+                    {
+                        KetQua.Add(ximang);
+                    }
+                }
+                else if (ia.Equals(iGach))
+                {
+                    gach = (Gach)arrVatLieu[iThuTu];
+                    if (gach.getTen().ToLower().Contains(keyword.ToLower()))
+                    {
+                        KetQua.Add(gach);
+                    }
+                }
+                else if (ia.Equals(iSatThep))
+                {
+                    satThep = (SatThep)arrVatLieu[iThuTu];
+                    if (satThep.getTen().ToLower().Contains(keyword.ToLower()))
+                    {
+                        KetQua.Add(satThep);
+                    }
+                }
+                else if (ia.Equals(iGo))
+                {
+                    go = (Go)arrVatLieu[iThuTu];
+                    if (go.getTen().ToLower().Contains(keyword.ToLower()))
+                    {
+                        KetQua.Add(go);
+                    }
+                }
+                else if (ia.Equals(iThuyTinh))
+                {
+                    thuyTinh = (ThuyTinh)arrVatLieu[iThuTu];
+                    if (thuyTinh.getTen().ToLower().Contains(keyword.ToLower()))
+                    {
+                        KetQua.Add(thuyTinh);
+                    }
+                }
+                else if (ia.Equals(iNhua))
+                {
+                    nhua = (Nhua)arrVatLieu[iThuTu];
+                    if (nhua.getTen().ToLower().Contains(keyword.ToLower()))
+                    {
+                        KetQua.Add(nhua);
+                    }
+                }
+                else if (ia.Equals(iSu))
+                {
+                    su = (Su)arrVatLieu[iThuTu];
+                    if (su.getTen().ToLower().Contains(keyword.ToLower()))
+                    {
+                        KetQua.Add(su);
+                    }
+                }
+            }
+            return KetQua;
+        }
+
+        public static void XuatCat(ArrayList arrVatLieu)
+        {
+            for (int iThuTu = 0; iThuTu < arrVatLieu.Count; iThuTu++)
+            {
+                Cat cat = new Cat();
+                Type ia = arrVatLieu[iThuTu].GetType();
+                Type ib = cat.GetType();
+                if (ia.Equals(ib))
+                {
+                    cat = (Cat)arrVatLieu[iThuTu];
+                    cat.XuatThongTin();
+                }
+            }
+        }
+        public static void XuatDa(ArrayList arrVatLieu, int iThuTu)
+        {
+            Da da = new Da();
+            Type ia = arrVatLieu[iThuTu].GetType();
+            Type ib = da.GetType();
+            if (ia.Equals(ib))
+            {
+                da = (Da)arrVatLieu[iThuTu];
+                da.XuatThongTin();
+            }
+        }
+        public static void XuatXiMang(ArrayList arrVatLieu, int iThuTu)
+        {
+            Ximang xiMang = new Ximang();
+            Type ia = arrVatLieu[iThuTu].GetType();
+            Type ib = xiMang.GetType();
+            if (ia.Equals(ib))
+            {
+                xiMang = (Ximang)arrVatLieu[iThuTu];
+                xiMang.XuatThongTin();
+            }
+        }
+        public static void XuatGach(ArrayList arrVatLieu, int iThuTu)
+        {
+            Gach gach = new Gach();
+            Type ia = arrVatLieu[iThuTu].GetType();
+            Type ib = gach.GetType();
+            if (ia.Equals(ib))
+            {
+                gach = (Gach)arrVatLieu[iThuTu];
+                gach.XuatThongTin();
+            }
+        }
+        public static void XuatSatThep(ArrayList arrVatLieu, int iThuTu)
+        {
+            SatThep satThep = new SatThep();
+            Type ia = arrVatLieu[iThuTu].GetType();
+            Type ib = satThep.GetType();
+            if (ia.Equals(ib))
+            {
+                satThep = (SatThep)arrVatLieu[iThuTu];
+                satThep.XuatThongTin();
+            }
+        }
+        public static void XuatGo(ArrayList arrVatLieu, int iThuTu)
+        {
+            Go go = new Go();
+            Type ia = arrVatLieu[iThuTu].GetType();
+            Type ib = go.GetType();
+            if (ia.Equals(ib))
+            {
+                go = (Go)arrVatLieu[iThuTu];
+                go.XuatThongTin();
+            }
+        }
+        public static void XuatThuyTinh(ArrayList arrVatLieu, int iThuTu)
+        {
+            ThuyTinh thuyTinh = new ThuyTinh();
+            Type ia = arrVatLieu[iThuTu].GetType();
+            Type ib = thuyTinh.GetType();
+            if (ia.Equals(ib))
+            {
+                thuyTinh = (ThuyTinh)arrVatLieu[iThuTu];
+                thuyTinh.XuatThongTin();
+            }
+        }
+        public static void XuatNhua(ArrayList arrVatLieu, int iThuTu)
+        {
+            Nhua nhua = new Nhua();
+            Type ia = arrVatLieu[iThuTu].GetType();
+            Type ib = nhua.GetType();
+            if (ia.Equals(ib))
+            {
+                nhua = (Nhua)arrVatLieu[iThuTu];
+                nhua.XuatThongTin();
+            }
+        }
+        public static void XuatSu(ArrayList arrVatLieu, int iThuTu)
+        {
+            Su su = new Su();
+            Type ia = arrVatLieu[iThuTu].GetType();
+            Type ib = su.GetType();
+            if (ia.Equals(ib))
+            {
+                su = (Su)arrVatLieu[iThuTu];
+                su.XuatThongTin();
+            }
         }
     }
 }

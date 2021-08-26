@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections;
 
-namespace QuanLyCuaHangVatLieuXayDung
+namespace QuanLyCuaHangVatLieuXayDung.LoaiVatLieu
 {
     abstract class VatLieu
     {

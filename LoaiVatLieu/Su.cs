@@ -1,12 +1,12 @@
 ﻿using System.Collections;
 
-namespace QuanLyCuaHangVatLieuXayDung
+namespace QuanLyCuaHangVatLieuXayDung.LoaiVatLieu
 {
-    class Go : VatLieu
+    class Su : VatLieu
     {
-        public Go()
+        public Su()
         {
-            setLoaiVatLieu(6);
+            setLoaiVatLieu(9);
         }
         public override string donViTinh()
         {
